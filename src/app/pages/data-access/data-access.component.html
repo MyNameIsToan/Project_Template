@@ -1,0 +1,38 @@
+<button type="button" class="btn btn-primary" (click)="openModal(template)">Open modal</button>
+
+<ng-template #template>
+   <div class="modal-header">
+      <h4 class="modal-title pull-left">View role</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+         <span aria-hidden="true">×</span>
+      </button>
+   </div>
+   <div class="modal-body">
+       <div class="menu">
+        <div class="menu-item" id="role-properties">
+            <h5 class=" card-title text-uppercase text-muted mb-0">
+              <a (click)="ShowRole()" class="content">Role Properties</a>
+            </h5>
+            <div *ngIf="Condition == 1" class="title-footer" id="role-footer"></div>
+          </div>
+        <div class="menu-item" id="permission">
+            <h5 class=" card-title text-uppercase text-muted mb-0">
+              <a (click)="ShowPermission()" class="content">Permission</a>
+            </h5>
+            <div *ngIf="Condition == 2" class="title-footer" id="permission-footer"></div>
+          </div>
+        <div class="menu-item" id="data-access">
+            <h5 class=" card-title text-uppercase text-muted mb-0">
+              <a (click)="ShowDataAccess()" class="content">Data Access Rights</a>
+            </h5>
+            <div *ngIf="Condition == 3" class="title-footer" id="data-access-footer"></div>
+          </div>
+        </div><br><br>
+        <div *ngIf="Condition == 3">
+            <app-data-access-right></app-data-access-right>
+        </div>
+        </div>
+   <div class="modal-footer">
+      <button type="button" class="btn btn-default" (click)="modalRef.hide()">Close</button>
+   </div>
+</ng-template>

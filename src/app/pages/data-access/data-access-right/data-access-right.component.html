@@ -1,0 +1,35 @@
+<div class="menu">
+    <div class="menu-item" id="report">
+        <h5 class=" card-title text-uppercase text-muted mb-0">
+          <a (click)="ShowReport()" class="content">Report</a>
+        </h5>
+        <div *ngIf="Condition == 1" class="title-footer" id="report-footer"></div>
+      </div>
+    <div class="menu-item" id="batch">
+        <h5 class=" card-title text-uppercase text-muted mb-0">
+          <a (click)="ShowBatch()" class="content">Batch process items</a>
+        </h5>
+        <div *ngIf="Condition == 2" class="title-footer" id="batch-footer"></div>
+      </div>
+    <div class="menu-item" id="data-editor">
+        <h5 class=" card-title text-uppercase text-muted mb-0">
+          <a (click)="ShowDataEditor()" class="content">Data Editor</a>
+        </h5>
+        <div *ngIf="Condition == 3" class="title-footer" id="data-editor-footer"></div>
+      </div>
+      <div class="menu-item" id="data-query">
+        <h5 class=" card-title text-uppercase text-muted mb-0">
+          <a (click)="ShowDataQuery()" class="content">Data Query</a>
+        </h5>
+        <div *ngIf="Condition == 4" class="title-footer" id="data-access-footer"></div>
+      </div>
+      <div class="menu-item" id="import-file">
+        <h5 class=" card-title text-uppercase text-muted mb-0">
+          <a (click)="ShowImportFile()" class="content">Import files</a>
+        </h5>
+        <div *ngIf="Condition == 5" class="title-footer" id="import-file-footer"></div>
+      </div>
+      <div>
+        
+      </div>
+    </div>

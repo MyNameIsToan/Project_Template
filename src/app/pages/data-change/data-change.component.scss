@@ -1,0 +1,55 @@
+.btn{
+    width: 10em;
+}
+
+.ava-image{
+    width:4em;
+}
+
+.user-info{
+    display: inline-block;
+    margin-left: 2em;
+}
+
+.pagination-area{
+    margin-top: 1em;
+    float: left;
+}
+
+.input-info{
+    width:100%;
+    height: 2.7em;
+    border: 1px solid grey;
+}
+
+.search{
+    margin-left: -1em;
+    width: 90%;
+}
+
+.keyword{
+    display: inline-flex;
+}
+
+#quantity{
+    width: 5em;
+    margin-left: 0.1em;
+    display: inline-flex;
+}
+
+
+#filter-collapse{
+    float: right;
+    margin-right: 0.6em;
+}
+
+.button-pagination{
+    border-radius: 45px;
+    width: 4em;
+    height: 4em;
+    margin: 0.1em;
+}
+
+.modal-body{
+    border-bottom: solid #dbdbdb 1px;
+}

@@ -1,0 +1,38 @@
+.menu{
+    display: inline-flex;
+}
+
+.menu-item{
+    width: 10em;
+    text-align: left;
+}
+
+.title-footer{
+    height: 0.2em;
+    width: 5em;
+    background-color: #dbdbdb;
+}
+
+#report-footer{
+    width: 3em;
+}
+
+#batch-footer{
+    width: 9em;
+}
+
+#data-editor-footer{
+    width:5.5em;
+}
+
+#data-access-footer{
+    width:5em;
+}
+
+#import-file-footer{
+    width:5.5em;
+}
+
+a{
+    cursor: pointer;
+}

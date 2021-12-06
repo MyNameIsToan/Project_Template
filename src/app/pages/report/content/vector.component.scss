@@ -1,0 +1,41 @@
+.content{
+  width: 100%;
+}
+
+.control{
+  width: 100%;
+  height: 7vh;
+  background-color: #dbdbdb;
+}
+
+.control-panel{
+  margin-top: 1vh;
+  display: inline-flex;
+}
+
+.form-control{
+  width: 10%;
+  margin-left: 1em;
+}
+
+span{
+  margin-top: 1vh;
+  margin-left: 1em;
+}
+
+button{
+  height:5vh;
+  background-color: white;
+}
+
+.button-area{
+  margin-left: 1em;
+}
+
+#search{
+  width:15em;
+}
+
+button{
+  color:black;
+}

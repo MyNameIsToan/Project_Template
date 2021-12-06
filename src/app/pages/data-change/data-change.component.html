@@ -1,0 +1,133 @@
+<button type="button" class="btn btn-primary" (click)="openModal(template)">Open modal</button>
+
+<ng-template #template>
+   <div class="modal-header">
+      <h4 class="modal-title pull-left">[Review data change]</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+         <span aria-hidden="true">×</span>
+      </button>
+   </div>
+   <div class="modal-body">
+    <div class=" row">
+        <div class=" col-xl-12 col-md-6">
+            <div class=" card-body">
+              <div class=" row">
+                <div class=" col-xl-3">
+                  <h5 class=" card-title text-uppercase text-muted mb-0">
+                    Table name
+                  </h5>
+                  <input type="text" class="form-control">
+                </div>
+      
+                <div class=" col-xl-3">
+                  <h5 class=" card-title text-uppercase text-muted mb-0">
+                    Status
+                  </h5>
+                  <select name="status" id="status" class="form-control">
+                    <option value="all">All</option>
+                  </select>
+                </div>
+
+                <div class=" col-xl-6">
+                  <h5 class=" card-title text-uppercase text-muted mb-0">
+                    Keyword
+                  </h5>
+                  <div class="col-sm-12 keyword">
+                    <input type="text" class="form-control search" placeholder="Keyword">
+                    <button class="btn btn-primary">Search</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" row">
+            <div class=" col">
+                <div class=" card-footer py-4">
+                  <button class="btn btn-success">Approve</button>
+                  <button class="btn btn-danger">Reject</button>
+                  <div id="filter-collapse"><i class="ni ni-bold-up"></i>&nbsp; Hide Filter</div>
+                </div>
+            </div>
+          </div>
+          <div class=" table-responsive">
+            <table class=" table align-items-center table-flush table-hover">
+              <thead class=" thead-light">
+                <tr>
+                  <th>
+                    <div class=" custom-control custom-checkbox">
+                      <input
+                        class=" custom-control-input"
+                        id="table-check-all"
+                        type="checkbox"
+                      />
+      
+                      <label class=" custom-control-label" for="table-check-all">
+                      </label>
+                    </div>
+                  </th>
+      
+                  <th>Table name</th>
+      
+                  <th>Status</th>
+      
+                  <th>Execution User</th>
+      
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr>
+                  <th>
+                    <div class=" custom-control custom-checkbox">
+                      <input
+                        class=" custom-control-input"
+                        id="table-check-all"
+                        type="checkbox"
+                      />
+      
+                      <label class=" custom-control-label" for="table-check-all">
+                      </label>
+                    </div>
+                  </th>
+      
+                  <td class=" table-user"><b> Phong Ban </b></td>
+      
+                  <td><span class=" text-muted"> Added </span></td>
+      
+                  <td>
+                      <img
+                        class=" rounded-circle border-secondary ava-image"
+                        src="assets/img/theme/team-4.jpg"
+                        />
+                      <div class="user-info">
+                        Name 
+                        <h6>3 days ago</h6>
+                      </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="foot-content">
+            Showing 1 to 5 of 211 entries &nbsp;
+            <span class="entries">
+              Show  
+              <select name="quantity" id="quantity" class="form-control">
+                <option value="5">5</option>
+              </select>
+              entries
+            </span>
+          </div>
+          <nav aria-label="..." class="pagination-area">
+            <button class="btn button-pagination">&lt;&lt;</button>
+            <button class="btn button-pagination">&lt;</button>
+            <button class="btn button-pagination">1</button>
+            <button class="btn button-pagination">&gt;</button>
+            <button class="btn button-pagination">&gt;&gt;</button>
+          </nav>
+        </div>
+   <div class="modal-footer">
+      <button type="button" class="btn btn-default" (click)="modalRef.hide()">Close</button>
+   </div>
+</ng-template>

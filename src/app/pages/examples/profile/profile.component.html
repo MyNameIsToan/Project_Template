@@ -1,0 +1,244 @@
+<div id="header">
+  <div class="header-item">
+    <i class="ni ni-calendar-grid-58"></i>
+    <span>24/11/2021</span>
+  </div>
+  <div class="header-item">
+    <select name="language" id="language">
+      <option value="English">English</option>
+    </select>
+  </div>
+  <div class="header-item"><i class="ni ni-bell-55"></i></div>
+  <div class="header-item" id="admin">
+    <span>Admin</span>
+    <img
+    class=" rounded-circle border-secondary ava-image"
+    src="assets/img/theme/team-4.jpg"
+    />
+  </div>
+  <div class="header-item"><i class="ni ni-chat-round"></i></div>
+</div>
+
+
+<div class=" header bg-danger pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-2 col-7 page-title">
+          <h6 class=" h2 text-white d-inline-block mb-0">Data Queries</h6>
+        </div>
+        <div class=" col-lg-3 col-7">
+          <h6 class=" h3 text-white d-inline-block mb-0">Execute and export data query</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class=" container-fluid mt--6">
+  <div class=" row">
+    <div class=" col">
+      <div class=" card">
+        <div class=" card-footer py-4">
+          <div class=" row">
+            <div class=" col-xl-12 col-md-3">
+                <div class=" card-body">
+                  <div class=" row">
+                    <div class=" col-xl-3">
+                      <h5 class=" card-title text-uppercase text-muted mb-0">
+                        Table name
+                      </h5>
+                      <select name="status" id="status" class="form-control">
+                        <option value="all">All</option>
+                      </select>
+                    </div>
+    
+                    <div class=" col-xl-9">
+                      <h5 class=" card-title text-uppercase text-muted mb-0">
+                        Keyword
+                      </h5>
+                      <div class="col-sm-12 keyword">
+                        <input type="text" class="form-control search" placeholder="Keyword">
+                        <button class="btn btn-primary btn-search">Search</button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="button-area">
+          <div class="choose-quantity">
+            <select name="quantity" id="quantity" class="form-control">
+              <option value="5">5</option>
+            </select>
+            <span>&nbsp; records</span>
+          </div>
+          </div>
+          <div class=" table-responsive">
+            <table class=" table align-items-center table-flush table-hover">
+              <thead class=" thead-light">
+                <tr>
+                  <th class="check-col">
+                    <div class=" custom-control custom-checkbox">
+                      <input
+                        class=" custom-control-input"
+                        id="table-check-all"
+                        type="checkbox"
+                      />
+      
+                      <label class=" custom-control-label" for="table-check-all">
+                      </label>
+                    </div>
+                  </th>
+      
+                  <th class="batch-col">Name</th>
+      
+                  <th class="status-col">Status</th>
+                  
+                  <th class="date-col">Date</th>
+      
+                  <th class="message-col">Message</th>
+      
+                  <th class="duration-col">Duration</th>
+      
+                  <th class="user-col">Execution user</th>
+      
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr>
+                  <th class="check-col">
+                    <div class=" custom-control custom-checkbox">
+                      <input
+                        class=" custom-control-input"
+                        id="table-check-all"
+                        type="checkbox"
+                      />
+      
+                      <label class=" custom-control-label" for="table-check-all">
+                      </label>
+                    </div>
+                  </th>
+                  <td><span class=" text-muted batch-col"> View Exchange Rate</span></td>
+      
+                  <td><span class=" text-muted status-col"> Completed </span></td>
+      
+                  <td><span class=" text-muted date-col"> 30/06/2019 </span></td>
+
+                  <td><span class=" text-muted message-col"></span></td>
+      
+                  <td><span class=" text-muted duration-col">43 ms</span></td>
+      
+                  <td><span class=" text-muted creator-col"> 
+                    <img
+                    class=" rounded-circle border-secondary ava-image"
+                    src="assets/img/theme/team-4.jpg"
+                    />
+                  <div class="user-info">
+                    admin 
+                    <h6>a few second ago</h6>
+                  </div>  
+                  </span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="foot-content">
+            Showing 1 to 5 of 4 entries &nbsp;
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="openModal(template)">Open modal</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #template>
+  <div class="modal-header">
+     <h4 class="modal-title pull-left">Execute data query</h4>
+     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">×</span>
+     </button>
+  </div>
+  <div class="modal-body">
+    <div class=" row">
+      <div class=" col-xl-12 col-md-6">
+          <div class=" card-body">
+            <div class=" row">
+              <div class=" col-xl-3">
+                <h5 class=" card-title text-uppercase text-muted mb-0">
+                  TxDate
+                </h5>
+                <input type="text" class="form-control" id="txdate">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class=" row">
+      <div class=" col-xl-12 col-md-3">
+            <div class=" row">
+              <div class=" col">
+                  <div class=" card-footer py-4">
+                    <button class="btn btn-secondary">View</button>
+                    <button class="btn btn-secondary">Export to excel</button>
+                  </div>
+              </div>
+            </div>
+            <div class=" table-responsive">
+              <table class=" table align-items-center table-flush table-hover">
+                <thead class=" thead-light">
+                  <tr>
+        
+                    <th>Source System</th>
+        
+                    <th>FromCCY</th>
+        
+                    <th>ToCCY</th>
+
+                    <th>Rate</th>
+        
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  <tr>        
+                    <td class=" table-user">'BOSC'</td>
+        
+                    <td><span class=" text-muted"> 'AUD' </span></td>
+        
+                    <td><span class=" text-muted"> 'VND' </span></td>
+
+                    <td><span class=" text-muted"> 15,946 </span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="foot-content">
+              Showing 1 to 5 of 211 entries &nbsp;
+              <span class="entries">
+                Show  
+                <select name="quantity" id="quantity" class="form-control">
+                  <option value="5">5</option>
+                </select>
+                entries
+              </span>
+            </div>
+            <nav aria-label="..." class="pagination-area">
+              <button class="btn button-pagination">&lt;&lt;</button>
+              <button class="btn button-pagination">&lt;</button>
+              <button class="btn button-pagination">1</button>
+              <button class="btn button-pagination">&gt;</button>
+              <button class="btn button-pagination">&gt;&gt;</button>
+            </nav>
+          </div>
+      </div>
+    </div>
+  <div class="modal-footer">
+     <button type="button" class="btn btn-default" (click)="modalRef.hide()">Close</button>
+  </div>
+</ng-template>

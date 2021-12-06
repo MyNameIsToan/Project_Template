@@ -1,0 +1,191 @@
+<div id="header">
+  <div class="header-item">
+    <i class="ni ni-calendar-grid-58"></i>
+    <span>24/11/2021</span>
+  </div>
+  <div class="header-item">
+    <select name="language" id="language">
+      <option value="English">English</option>
+    </select>
+  </div>
+  <div class="header-item"><i class="ni ni-bell-55"></i></div>
+  <div class="header-item" id="admin">
+    <span>Admin</span>
+    <img
+    class=" rounded-circle border-secondary ava-image"
+    src="assets/img/theme/team-4.jpg"
+    />
+  </div>
+  <div class="header-item"><i class="ni ni-chat-round"></i></div>
+</div>
+
+<div class=" header bg-danger pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-2 col-7 page-title">
+          <h6 class=" h2 text-white d-inline-block mb-0">Import Management</h6>
+        </div>
+        <div class=" col-lg-3 col-7">
+          <h6 class=" h3 text-white d-inline-block mb-0">Upload and import file</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class=" container-fluid mt--6">
+  <div class=" card">
+    <div class=" row">
+      <div class=" col-xl-12 col-md-3">
+          <div class=" card-body">
+            <div class=" row">
+              <div class=" col-xl-3">
+                <h5 class=" card-title text-uppercase text-muted mb-0">
+                  Table name
+                </h5>
+                <select name="status" id="status" class="form-control">
+                  <option value="all">All</option>
+                </select>
+              </div>
+    
+              <div class=" col-xl-3">
+                <h5 class=" card-title text-uppercase text-muted mb-0">
+                  Status
+                </h5>
+                <select name="status" id="status" class="form-control">
+                  <option value="all">All</option>
+                </select>
+              </div>
+
+              <div class=" col-xl-3">
+                <h5 class=" card-title text-uppercase text-muted mb-0">
+                  Transaction Date
+                </h5>
+                <input type="text" class="form-control">
+              </div>
+
+
+              <div class=" col-xl-3">
+                <h5 class=" card-title text-uppercase text-muted mb-0">
+                  Keyword
+                </h5>
+                <div class="col-sm-12 keyword">
+                  <input type="text" class="form-control search" placeholder="Keyword">
+                  <button class="btn btn-primary btn-search">Search</button>
+                </div>
+              </div>
+              <div class="button-area">
+                <button class="btn btn-control"><i class="ni ni-fat-add"></i>&nbsp;Import</button>
+                <button class="btn btn-control"><i class="ni ni-check-bold"></i>&nbsp;Submit</button>
+                <button class="btn btn-control"><i class="ni ni-check-bold"></i>&nbsp;Review</button>
+                <button class="btn btn-control"><i class="ni ni-fat-remove"></i>&nbsp;Cancel</button>
+                <button class="btn btn-control"><i class="ni ni-bullet-list-67"></i>&nbsp;View logs</button>
+                <button class="btn btn-control"><i class="ni ni-cloud-download-95"></i>&nbsp;Download</button>
+                <button class="btn btn-primary"><i class="ni ni-cloud-upload-96"></i>&nbsp;Upload</button>
+                <div id="filter-collapse"><i class="ni ni-bold-up"></i>&nbsp; Hide Filter</div><br>
+                <div class="entries">
+                  <select name="quantity" id="quantity" class="form-control">
+                    <option value="10">10</option>
+                  </select>
+                  <p id="records">records</p>
+                </div>
+              </div>
+            </div>
+            <div class=" table-responsive">
+              <table class=" table align-items-center table-flush table-hover">
+                <thead class=" thead-light">
+                  <tr>
+                    <th>
+                      <div class=" custom-control custom-checkbox">
+                        <input
+                          class=" custom-control-input"
+                          id="table-check-all"
+                          type="checkbox"
+                        />
+        
+                        <label class=" custom-control-label" for="table-check-all">
+                        </label>
+                      </div>
+                    </th>
+        
+                    <th>File name</th>
+        
+                    <th>File type</th>
+        
+                    <th>Transaction Date</th>
+        
+                    <th>Status</th>
+        
+                    <th>Import rows</th>
+        
+                    <th>Upload user</th>
+        
+                    <th>Execution user</th>
+        
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  <tr>
+                    <th>
+                      <div class=" custom-control custom-checkbox">
+                        <input
+                          class=" custom-control-input"
+                          id="table-check-all"
+                          type="checkbox"
+                        />
+        
+                        <label class=" custom-control-label" for="table-check-all">
+                        </label>
+                      </div>
+                    </th>
+        
+                    <td class=" table-user"><b> Phong Ban </b></td>
+        
+                    <td><span class=" text-muted"> Added </span></td>
+        
+                    <td><span class=" text-muted"> Added </span></td>
+        
+                    <td><span class=" text-muted"> Added </span></td>
+        
+                    <td><span class=" text-muted"> Added </span></td>
+        
+                    <td><span class=" text-muted"> Added </span></td>
+        
+                    <td><span class=" text-muted"> Added </span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="footer-info">
+            Showing 1 to 10 of 35 entries &nbsp; 1 row selected 
+          </div>
+          <div class="paging">
+          <nav aria-label="..." class="pagination-area">
+            <pagination [totalItems]="25"
+                        class="justify-content-end mb-0"
+                        [customPreviousTemplate]="prevTemplate"
+                        [customNextTemplate]="nextTemplate">
+            </pagination>
+        
+            <ng-template #nextTemplate let-currentPage="currentPage">
+              <ng-container *ngIf="!disabled">
+                <i class='fas fa-angle-right'></i>
+              </ng-container>
+            </ng-template>
+        
+            <ng-template #prevTemplate let-currentPage="currentPage">
+              <ng-container *ngIf="!disabled">
+                <i class='fas fa-angle-left'></i>
+              </ng-container>
+            </ng-template>
+          </nav>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>

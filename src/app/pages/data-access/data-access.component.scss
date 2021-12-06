@@ -1,0 +1,29 @@
+.menu{
+    display: inline-flex;
+}
+
+.menu-item{
+    width: 10em;
+}
+
+.title-footer{
+    height: 0.2em;
+    width: 5em;
+    background-color: #dbdbdb;
+}
+
+#role-footer{
+    width: 7em;
+}
+
+#permission-footer{
+    width: 5em;
+}
+
+#data-access-footer{
+    width:8.5em;
+}
+
+a{
+    cursor: pointer;
+}

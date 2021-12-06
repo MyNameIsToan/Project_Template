@@ -1,0 +1,88 @@
+<div id="header">
+  <div class="header-item">
+    <i class="ni ni-calendar-grid-58"></i>
+    <span>24/11/2021</span>
+  </div>
+  <div class="header-item">
+    <select name="language" id="language">
+      <option value="English">English</option>
+    </select>
+  </div>
+  <div class="header-item"><i class="ni ni-bell-55"></i></div>
+  <div class="header-item" id="admin">
+    <span>Admin</span>
+    <img
+    class=" rounded-circle border-secondary ava-image"
+    src="assets/img/theme/team-4.jpg"
+    />
+  </div>
+  <div class="header-item"><i class="ni ni-chat-round"></i></div>
+</div>
+
+
+<div class=" header bg-danger pb-6">
+  <div class=" container-fluid">
+    <div class=" header-body">
+      <div class=" row align-items-center py-4">
+        <div class=" col-lg-1 col-7 page-title">
+          <h6 class=" h2 text-white d-inline-block mb-0">Settings</h6>
+        </div>
+        <div class=" col-lg-3 col-7">
+          <h6 class=" h3 text-white d-inline-block mb-0">Show and change application settings</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class=" container-fluid mt--6">
+  <div class=" row">
+    <div class=" col">
+      <div class=" card">
+        <div class=" card-footer py-4">
+          <div class=" row">
+                <div class=" card-body">
+                  <div class=" row">    
+                    <div class=" col-xl-2">
+                      <h5 class=" card-title text-uppercase text-muted mb-0">
+                        <a (click)="ShowUserManagement()" id="user-title">User Management</a>
+                      </h5>
+                      <div *ngIf="Condition == 1" class="title-footer" id="user-footer"></div>
+                    </div>
+                    <div class=" col-xl-1">
+                      <h5 class=" card-title text-uppercase text-muted mb-0">
+                        <a (click)="ShowSecurity()">Security</a>
+                      </h5>
+                      <div *ngIf="Condition == 2" class="title-footer" id="security-footer"></div>
+                    </div>
+                    <div class=" col-xl-1">
+                      <h5 class=" card-title text-uppercase text-muted mb-0">
+                        <a (click)="ShowEmail()">Email(SMTP)</a>
+                      </h5>
+                      <div *ngIf="Condition == 3" class="title-footer" id="email-footer"></div>
+                    </div>
+                    <div class=" col-xl-2">
+                      <h5 class=" card-title text-uppercase text-muted mb-0">
+                        <a (click)="ShowSystemSetting()">System Settings</a>
+                      </h5>
+                      <div *ngIf="Condition == 4" class="title-footer" id="system-setting-footer"></div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div *ngIf="Condition == 1">
+                    <app-validation></app-validation>
+                  </div>
+                  <div *ngIf="Condition == 2">
+                    <app-components></app-components>
+                  </div>
+                  <div *ngIf="Condition == 3">
+                   <app-email></app-email>
+                  </div>
+                  <div *ngIf="Condition == 4">
+                    <app-system-setting></app-system-setting>
+                  </div>
+                </div>
+              </div>
+            </div>
